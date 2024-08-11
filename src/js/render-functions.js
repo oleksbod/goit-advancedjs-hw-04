@@ -16,8 +16,8 @@ export const showInfoToast = (msg) => {
         position: "topRight",
         icon: 'icon-bi_info',
         title: '',
-        message: msg,        
-        progressBar: 'rgb(0, 113, 189)',        
+        message: msg,
+        progressBar: 'rgb(0, 113, 189)',
     });
 }
 

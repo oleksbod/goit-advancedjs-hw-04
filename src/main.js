@@ -36,7 +36,7 @@ const onSearchFormSubmit = async (event) => {
 
         showGallery(result.hits);
 
-        if (result.totalHits > imagesPerLoad) {            
+        if (result.totalHits > imagesPerLoad) {
             loadMoreButton.classList.remove('is-hidden');
         }
     }
@@ -57,6 +57,8 @@ const onLoadMoreButtonClick = async () => {
         const result = await fetchImages(searchQuery, currentPage, imagesPerLoad);
         appendGallery(result.hits);
 
+        smoothScroll();
+
         if (currentPage * imagesPerLoad >= result.totalHits) {
             loadMoreButton.classList.add('is-hidden');
             showInfoToast("We're sorry, but you've reached the end of search results.");
@@ -65,6 +67,17 @@ const onLoadMoreButtonClick = async () => {
         console.log(err);
     } finally {
         loader.classList.add('is-hidden');
+    }
+};
+
+const smoothScroll = () => {
+    const galleryItem = document.querySelector('.gallery-item');
+    if (galleryItem) {
+        const { height } = galleryItem.getBoundingClientRect();
+        window.scrollBy({
+            top: height * 2,
+            behavior: 'smooth',
+        });
     }
 };
 
