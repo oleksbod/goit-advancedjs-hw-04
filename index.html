@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/goit-advancedjs-hw-04/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+  
+  
+  <script type="module" crossorigin src="/goit-advancedjs-hw-04/commonHelpers.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-29bc32e7.js">
+  <link rel="stylesheet" href="/goit-advancedjs-hw-04/assets/index-12d5f049.css">
+</head>
+
+<body>
+  <div class="container">
+    <form class="search-form">
+      <input type="text" name="user_query" id="search" placeholder="Search images..." required />
+      <button id="searchButton" type="submit">Search</button>
+    </form>
+    <div class="loader-wrapper">
+      <span class="loader is-hidden"></span>
+    </div>
+    <div class="gallery-container">
+      <ul class="gallery"></ul>
+    </div>
+    <button id="loadMoreButton" class="is-hidden">Load more</button>
+  </div>
+
+  
+</body>
+
+</html>
