@@ -20,6 +20,7 @@ const onSearchFormSubmit = async (event) => {
         return;
     }
 
+    searchQuery = searchedValue;
     currentPage = 1;
     loadMoreButton.classList.add('is-hidden');
     loader.classList.remove('is-hidden');
